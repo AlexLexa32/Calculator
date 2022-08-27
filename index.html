@@ -6,140 +6,19 @@
         <title>Calculator</title>
         <link rel = "shortcut icon" href = "Avatarka.ico" type = "image/x-icon">
         <link rel = "Stylesheet" href = "Styles.css">
+        <script src = "JS.js"></script>
 
     </head>
 
 
     <body>
-
-        <script>
-            var primer = "";
-            var x = 0;
-
-            function p1() {
-                primer = document.getElementById("myspan").value + "1"
-                document.getElementById("myspan").value=primer;
-            }
-            function p2() {
-                primer = document.getElementById("myspan").value + "2"
-                document.getElementById("myspan").value=primer;
-            }
-            function p3() {
-                primer = document.getElementById("myspan").value + "3"
-                document.getElementById("myspan").value=primer;
-            }
-            function p4() {
-                primer = document.getElementById("myspan").value + "4"
-                document.getElementById("myspan").value=primer;
-            }
-            function p5() {
-                primer = document.getElementById("myspan").value + "5"
-                document.getElementById("myspan").value=primer;
-            }
-            function p6() {
-                primer = document.getElementById("myspan").value + "6"
-                document.getElementById("myspan").value=primer;
-            }
-            function p7() {
-                primer = document.getElementById("myspan").value + "7"
-                document.getElementById("myspan").value=primer;
-            }
-            function p8() {
-                primer = document.getElementById("myspan").value + "8"
-                document.getElementById("myspan").value=primer;
-            }
-            function p9() {
-                primer = document.getElementById("myspan").value + "9"
-                document.getElementById("myspan").value=primer;
-            }
-            function p0() {
-                primer = document.getElementById("myspan").value + "0"
-                document.getElementById("myspan").value=primer;
-            }
-            function pp() {
-                primer = document.getElementById("myspan").value + "+"
-                document.getElementById("myspan").value=primer;
-            }
-            function pm() {
-                primer = document.getElementById("myspan").value + "-"
-                document.getElementById("myspan").value=primer;
-            }
-            function ppr() {
-                primer = document.getElementById("myspan").value + "**"
-                document.getElementById("myspan").value=primer;
-            }
-            function pd() {
-                primer = document.getElementById("myspan").value + "/"
-                document.getElementById("myspan").value=primer;
-            }
-            function pu() {
-                primer = document.getElementById("myspan").value + "*"
-                document.getElementById("myspan").value=primer;
-            }
-            function pt() {
-                primer = document.getElementById("myspan").value + "."
-                document.getElementById("myspan").value=primer;
-            }
-            function pk() {
-                alert("корня пока нема")
-            }
-            function ps() {
-
-                if (x % 2 == 0) {
-
-                primer = document.getElementById("myspan").value + "(";
-                document.getElementById("myspan").value=primer;
-
-                } else {
-
-                    primer = document.getElementById("myspan").value + ")";
-                    document.getElementById("myspan").value=primer;
-
-                }
-
-                x = x + 1;
-            }
-            function pmod() {
-                primer = document.getElementById("myspan").value + "%"
-                document.getElementById("myspan").value=primer;
-            }
-
-
-            function ravno() {
-                if ( primer == "" ) {
-                    document.getElementById("myspan").value = "";
-                } else {
-                    primer = document.getElementById("myspan").value;
-                    document.getElementById("myspan").value=String(eval(primer));
-                    primer = String(eval(primer));
-                }
-
-                console.log(primer);
-            }
-
-            function Backspace() {
-                primer = document.getElementById("myspan").value;
-                primer = primer.slice(0, primer.length - 1);
-                document.getElementById("myspan").value=primer;
-            }
-
-            function CE() {
-                primer = "";
-                document.getElementById("myspan").value=primer;
-            }
-        </script>
-
-        
         
         <div class = "block">
             
-
             <div class="btn-group3" style="width:100%; height:100%;">
-                <table>
-                    <button onclick = "CE()" style = "text-align: center; width:20%; height:20%;">СЕ</button>
-                    <input id = "myspan" class = "search-input" style = "width: 60%;" placeholder = "Введите пример"></input>
-                    <button onclick = "Backspace()" style = "text-align: center; width: 20%; height:20%;">←</button>
-                </table>
+                <button onclick = "CE()" style = "text-align: center; width:20%; height:20%;">СЕ</button>
+                <input type = "text" id = "myspan" value = "" class = "search-input" style = "width: 60%;" placeholder = "Введите пример">
+                <button onclick = "Backspace()" style = "text-align: center; width: 20%; height:20%;">←</button>
             </div>
 
             <div class="btn-group1" style="width:100%; height:100%;">
@@ -169,7 +48,10 @@
             <div class="btn-group1" style="width:100%">
                 <button onclick="p0()" style="text-align: center;width:20%">0</button>
                 <button onclick="pt()" style="text-align: center; width:20%">.</button>
-                <button onclick="pk()" style="text-align: center; width:20%">√</button>
+
+
+                <button id = "k" onclick="pk(this)" style="text-align: center; width:20%">√</button>
+
                 <button onclick="ps()" style="text-align: center; width:20%">()</button>
                 <div class="btn-group2" style="width:100%">
                     <button onclick="ravno()" style="text-align: center; width:20%">=</button>
@@ -178,7 +60,5 @@
             </div>
         </div>
 
-
     </body>
-
 </html>
