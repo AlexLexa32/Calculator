@@ -1,0 +1,59 @@
+body{background-color: white;}
+
+button {
+    background: #007E3E; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    border-radius: 5px; /* Уголки */
+}
+
+.btn-group3 button {
+    background-color: #235B79;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    padding: 24px 24px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#s button {
+    background-color: #1E796A;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    padding: 24px 24px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group3:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+button:not(:last-child) {border-right: none;}
+button:hover {background-color: #005c2c;}
+button:active {background-color: #009f5f;}
+.btn-group3 button:not(:last-child) {border-right: none;}
+.btn-group3 button:hover {background-color: #034569;}
+.btn-group3 button:active {background-color: #086CA2;}
+#s button:not(:last-child) {border-right: none;}
+#s button:hover {background-color: #006957;}
+#s button:active {background-color: #00A287;}
+
+.block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+}
+
+.search-input {
+    border: 1px solid rgb(0, 0, 0);
+    height: 10%;
+    padding: 24px 30px;
+    box-sizing: border-box;
+}
